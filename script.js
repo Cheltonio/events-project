@@ -1,52 +1,43 @@
 let div = document.querySelector("div");
 
-document.getElementById("aqua").onclick = function aqua() {
+document.getElementById("aqua").onclick = aqua;
+document.getElementById("teal").onclick = teal;
+document.getElementById("pink").onclick = pink;
+document.getElementById("purple").onclick = purple;
+document.getElementById("colorless").onclick = colorless;
+
+function aqua() {
     div.style.background = "aqua";
     div.innerHTML = "aqua";
 }
 
-document.getElementById("teal").onclick = function teal() {
+function teal() {
     div.style.background = "teal";
     div.innerHTML = "teal";
 }
 
-document.getElementById("pink").onclick = function pink() {
+function pink() {
     div.style.background = "pink";
     div.innerHTML = "pink";
 }
 
-document.getElementById("purple").onclick = function purple() {
+function purple() {
     div.style.background = "purple";
     div.innerHTML = "purple";
 }
 
-document.getElementById("colorless").onclick = function colorless() {
+function colorless() {
     div.style.background = "white";
     div.innerHTML = "colorless";
 }
 
 document.getElementById("random").onclick = function random() {
     let num = parseInt(Math.random()*5);
-    if(num==0) {
-        div.style.background = "aqua";
-        div.innerHTML = "aqua";
-    }
-    else if(num==1) {
-        div.style.background = "teal";
-        div.innerHTML = "teal";
-    }
-    else if(num==2) {
-        div.style.background = "pink";
-        div.innerHTML = "pink";
-    }
-    else if(num==3) {
-        div.style.background = "purple";
-        div.innerHTML = "purple";
-    }
-    else {
-        div.style.background = "white";
-        div.innerHTML = "colorless";
-    }
+    if(num==0) aqua();
+    else if(num==1) teal();
+    else if(num==2) pink();
+    else if(num==3) purple();
+    else colorless();
 }
 
 document.getElementById("display").onclick = function() {
